@@ -31,8 +31,8 @@ export const tableReducer = (state, action) => {
     case "SORT_BY_WEIGHT":
       const sortByWeight = state.sort((a, b) =>
         payload
-          ? a.product_weight - b.product_weight
-          : b.product_weight - a.product_weight
+          ? parseFloat(a.product_weight) - parseFloat(b.product_weight)
+          : parseFloat(b.product_weight) - parseFloat(a.product_weight)
       );
       return sortByWeight;
 

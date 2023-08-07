@@ -17,7 +17,11 @@ export const Table = () => {
     <div className="div">
       <h1> Snack Table </h1>{" "}
       <div className="table">
-        <input type="text" onChange={handleSearch} />
+        <input
+          type="text"
+          onChange={handleSearch}
+          placeholder="Search snacks"
+        />
 
         <div>
           {" "}
